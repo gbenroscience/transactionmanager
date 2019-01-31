@@ -30,8 +30,15 @@ Here is some sample code:
 ```
    TransactionManager manager = new TransactionManager() {
    
- @Override
  
+ /**
+  * Your sql transactions go here. 
+  * Return false if they throw any error. Return true if all is well.
+  * To handle various errors, set an error code for any error that occurrs.
+  * The onRollback(int error) callback will allow you to handle that error
+  * specifically later on with a simple switch or if
+  */
+ @Override
  public boolean process(Connection conn) {
 
    

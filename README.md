@@ -44,7 +44,7 @@ Here is some sample code:
    
    }
    /**
-    * Transation completed successfully. Do dependent actions here
+    * Transaction completed successfully. Do dependent actions here
     */
       @Override
        public void onCommit() {
@@ -52,7 +52,7 @@ Here is some sample code:
                         
              }
     /**
-    * Transation failed. Do error processing here.
+    * Transaction failed. Do error processing here.
     */           
    @Override 
    public void onRollback(int errorCode) {

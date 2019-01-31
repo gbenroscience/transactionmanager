@@ -47,7 +47,7 @@ Here is some sample code:
       @Override
        public void onCommit() {
                         super.onCommit(); 
-                 sendContent(response, succResp);
+                        
              }
              
    @Override

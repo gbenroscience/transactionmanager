@@ -30,9 +30,10 @@ Here is some sample code:
 <code>
    TransactionManager manager = new TransactionManager() {
    
+
  @Override
  public boolean process(Connection conn) {
-   /*Transaction codes here. return false if any sql error occurrs*/
+
    
    }
       @Override

@@ -2,7 +2,7 @@
 TransactionManager is a simple Java class that is useful for managing database transactions.
 
 
-A <a href="https://en.wikipedia.org/wiki/Database_transaction">Database transaction</a> represents a single unit of sql logic or work, sometimes made up of multiple operations(i.e sql statements) We usually want to ensure that once the transaction completes that the full intended logic, either executes or is discarded, causing the database to retain its original state.
+A <a href="https://en.wikipedia.org/wiki/Database_transaction">Database transaction</a> represents a single unit of sql logic or work, sometimes made up of multiple operations(i.e sql statements) We always want to ensure that once the transaction completes, the full intended logic, either executes or is discarded, causing the database to retain its original state.
 
 <code>TransactionManager.java</code> is a class that helps developers with this. 
 

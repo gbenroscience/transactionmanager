@@ -21,7 +21,8 @@ These methods are called immediately by <code>TransactionManager.java</code> onc
 
 If there are any operations that you want to perform once your transaction is successfully concluded, you specify them in </code>onCommit</code>. This may include sending some JSON information to a client or redirecting to some website.
 
-If you would like to take actions based on some error during the transaction for which you set an error-code, define the error operations in <code>onRollback(int errorCode)</code> The errorCode parameter is the error you set in the <code>process()</code> method when the error happened. This may include sending some JSON information to a client or redirecting to some website.
+If you would like to take actions based on some error during the transaction for which you set an error-code, define the error operations in <code>onRollback(int errorCode)</code> The errorCode parameter is the error you set in the 
+<code>process()</code> method when the error happened. This may include sending some JSON information to a client or redirecting to some website.
 
 Here is some sample code:
 
@@ -31,29 +32,29 @@ Here is some sample code:
    
  @Override
  public boolean process(Connection conn) {
-   //Transaction codes here. return false if any sql error occurrs
+   /*Transaction codes here. return false if any sql error occurrs*/
    
    }
       @Override
        public void onCommit() {
-                        super.onCommit(); //To change body of generated methods, choose Tools | Templates.
-                
-                        
-                        sendContent(response, succResp);
-                    }
-
-                    @Override
-                    public void onRollback(int errorCode) {
-                        super.onRollback(errorCode); //To change body of generated methods, choose Tools | Templates.
+                        super.onCommit(); 
+                 sendContent(response, succResp);
+             }
+   @Override
+   public void onRollback(int errorCode) {
+                        super.onRollback(errorCode); 
+   }
+   
+   }
+   
+            manager.startTransaction(conn);
                  
-                    }
    
    </code>
    
    
-   <p style="font-weight:bold">
-    Now for a simple example.
-   </p>
+ <b> Now for a simple example: </b>
+ 
 
 <code>
    TransactionManager manager = new TransactionManager() {
@@ -215,11 +216,9 @@ Here is some sample code:
 
                 };
                 
-                //Get the connection object from a pool or create it.
+                /*Get the connection object from a pool or create it.*/
                 manager.startTransaction(conn);
-
-
-
+                
 </code>
 
 

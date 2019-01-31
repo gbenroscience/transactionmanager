@@ -28,25 +28,33 @@ Here is some sample code:
 
 
 <code>
+   
    TransactionManager manager = new TransactionManager() {
    
 
  @Override
+ 
  public boolean process(Connection conn) {
 
    
    }
+   
       @Override
+      
        public void onCommit() {
                         super.onCommit(); 
                  sendContent(response, succResp);
              }
+             
    @Override
+   
    public void onRollback(int errorCode) {
                         super.onRollback(errorCode); 
    }
    
    }
+   
+   
     manager.startTransaction(conn); 
     
    </code>
@@ -56,6 +64,7 @@ Here is some sample code:
  
 
 <code>
+   
    TransactionManager manager = new TransactionManager() {
 
                     JSONObject succResp = new JSONObject();

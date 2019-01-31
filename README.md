@@ -24,6 +24,9 @@ If there are any operations that you want to perform once your transaction is su
 If you would like to take actions based on some error during the transaction for which you set an error-code, define the error operations in <code>onRollback(int errorCode)</code> The errorCode parameter is the error you set in the 
 <code>process()</code> method when the error happened. This may include sending some JSON information to a client or redirecting to some website.
 
+
+<b> Note that all actions taking place in a TransactionManager object are blocking operations. They are all performed on the same thread that invoked the TransactionManager</b>
+
 Here is some sample code:
 
 

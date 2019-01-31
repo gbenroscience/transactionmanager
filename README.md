@@ -27,11 +27,9 @@ If you would like to take actions based on some error during the transaction for
 Here is some sample code:
 
 
-<code>
-   
+```
    TransactionManager manager = new TransactionManager() {
    
-
  @Override
  
  public boolean process(Connection conn) {
@@ -40,7 +38,6 @@ Here is some sample code:
    }
    
       @Override
-      
        public void onCommit() {
                         super.onCommit(); 
                  sendContent(response, succResp);
@@ -57,13 +54,13 @@ Here is some sample code:
    
     manager.startTransaction(conn); 
     
-   </code>
+```
    
    
  <b> Now for a simple example: </b>
  
 
-<code>
+```
    
    TransactionManager manager = new TransactionManager() {
 
@@ -227,7 +224,7 @@ Here is some sample code:
                 /*Get the connection object from a pool or create it.*/
                 manager.startTransaction(conn);
                 
-</code>
+```
 
 
 

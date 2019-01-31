@@ -27,31 +27,6 @@ If you would like to take actions based on some error during the transaction for
 Here is some sample code:
 
 
-<code>
-   TransactionManager manager = new TransactionManager() {
-   
-
- @Override
- public boolean process(Connection conn) {
-
-   
-   }
-      @Override
-       public void onCommit() {
-                        super.onCommit(); 
-                 sendContent(response, succResp);
-             }
-   @Override
-   public void onRollback(int errorCode) {
-                        super.onRollback(errorCode); 
-   }
-   
-   }
-   
-            manager.startTransaction(conn);
-                 
-   
-   </code>
    
    
  <b> Now for a simple example: </b>

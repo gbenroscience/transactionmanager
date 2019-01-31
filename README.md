@@ -25,7 +25,7 @@ If you would like to take actions based on some error during the transaction for
 <code>process()</code> method when the error happened. This may include sending some JSON information to a client or redirecting to some website.
 
 
-<b> Note that all actions taking place in a TransactionManager object are blocking operations. They are all performed on the same thread that invoked the TransactionManager</b>
+<b> Note that all actions taking place in a TransactionManager object are blocking operations. They are all performed on the same thread that invoked the TransactionManager.</b>
 
 Here is some sample code:
 

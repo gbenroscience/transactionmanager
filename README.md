@@ -25,6 +25,36 @@ If you would like to take actions based on some error during the transaction for
 
 Here is some sample code:
 
+
+<code>
+   TransactionManager manager = new TransactionManager() {
+   
+ @Override
+ public boolean process(Connection conn) {
+   //Transaction codes here. return false if any sql error occurrs
+   
+   }
+      @Override
+       public void onCommit() {
+                        super.onCommit(); //To change body of generated methods, choose Tools | Templates.
+                
+                        
+                        sendContent(response, succResp);
+                    }
+
+                    @Override
+                    public void onRollback(int errorCode) {
+                        super.onRollback(errorCode); //To change body of generated methods, choose Tools | Templates.
+                 
+                    }
+   
+   </code>
+   
+   
+   <p style="font-weight:bold">
+    Now for a simple example.
+   </p>
+
 <code>
    TransactionManager manager = new TransactionManager() {
 

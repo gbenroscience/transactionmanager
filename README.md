@@ -43,15 +43,18 @@ Here is some sample code:
 
    
    }
-   
+   /**
+    * Transation completed successfully. Do dependent actions here
+    */
       @Override
        public void onCommit() {
                         super.onCommit(); 
                         
              }
-             
-   @Override
-   
+    /**
+    * Transation failed. Do error processing here.
+    */           
+   @Override 
    public void onRollback(int errorCode) {
                         super.onRollback(errorCode); 
    }

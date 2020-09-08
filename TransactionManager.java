@@ -112,7 +112,7 @@ public abstract class TransactionManager {
      * @param conn The Connection object
      * @return true if the transaction should be committed; and false otherwise.
      */
-    public abstract boolean process(java.sql.Connection conn);
+    protected abstract boolean process(java.sql.Connection conn);
 
     /**
      * Override to perform completion operations like writing to the client if the commit

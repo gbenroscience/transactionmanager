@@ -30,7 +30,7 @@ If you would like to take actions based on some error during the transaction for
 Here is some sample code:
 
 
-```
+```Java
    TransactionManager manager = new TransactionManager() {
    
  
@@ -73,7 +73,7 @@ Here is some sample code:
  <b> Now for a simple example: </b>
  
 
-```
+```Java
    
    TransactionManager manager = new TransactionManager() {
 
